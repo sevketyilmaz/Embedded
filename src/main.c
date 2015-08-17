@@ -86,8 +86,18 @@ void USART1_IRQHandler(void){
 			received_string[cnt] = t;
 			cnt++;
 		}
-		else { 
+		else {
 			
+			char ledOn[13] = "LED6";
+			char ledOff[13] = "LED6OFF";
+
+			if(strcmp(received_string,ledOn) == 0){
+					STM_EVAL_LEDOn(LED6);
+			}
+			
+			if(strcmp(received_string,ledOff) == 0){
+					STM_EVAL_LEDOff(LED6);
+			}
 			cnt = 0;
 		}
 	}
