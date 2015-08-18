@@ -1,6 +1,6 @@
 Dependencies for Project 'pill_box', Target 'PillBox': (DO NOT MODIFY !)
 F (.\startup_stm32f40xx.s)(0x5209ED8E)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F4xx--list .\startup_stm32f40xx.lst --xref -o .\hex\startup_stm32f40xx.o --depend .\hex\startup_stm32f40xx.d)
-F (.\src\main.c)(0x55D1ACF5)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\src -I.\inc -I.\Libraries\CMSIS\Include -I.\Libraries\CMSIS\Device\ST\STM32F4xx\Include -I.\Libraries\STM32F4xx_StdPeriph_Driver\src -I.\Libraries\STM32F4xx_StdPeriph_Driver\inc -I.\Utilities\STM32F4-Discovery -I.\DELAY-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F4xx-DSTM32F4XX -DUSE_STDPERIPH_DRIVER -DSTM32F40XX-o .\hex\main.o --omf_browse .\hex\main.crf --depend .\hex\main.d)
+F (.\src\main.c)(0x55D2E749)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I.\src -I.\inc -I.\Libraries\CMSIS\Include -I.\Libraries\CMSIS\Device\ST\STM32F4xx\Include -I.\Libraries\STM32F4xx_StdPeriph_Driver\src -I.\Libraries\STM32F4xx_StdPeriph_Driver\inc -I.\Utilities\STM32F4-Discovery -I.\DELAY-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F4xx-DSTM32F4XX -DUSE_STDPERIPH_DRIVER -DSTM32F40XX-o .\hex\main.o --omf_browse .\hex\main.crf --depend .\hex\main.d)
 I (.\Libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x51380EB6)
 I (.\Libraries\CMSIS\Include\core_cm4.h)(0x50F4E408)
 I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7FD94)
