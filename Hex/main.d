@@ -35,3 +35,4 @@
 .\hex\main.o: .\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_wwdg.h
 .\hex\main.o: .\Libraries\STM32F4xx_StdPeriph_Driver\inc\misc.h
 .\hex\main.o: .\Utilities\STM32F4-Discovery\stm32f4_discovery.h
+.\hex\main.o: .\DELAY\delay.h
