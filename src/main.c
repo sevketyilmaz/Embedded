@@ -16,7 +16,7 @@ int main(void) {
 	
 	while(1){
 		stepper();
-		delay_ms(8);
+		delay_ms(4);
 	}
 }
 
@@ -32,32 +32,32 @@ void motor_pin_init() {
 	  GPIO_Init(GPIOE, &GPIO_InitStruct_Motor);
 }
 
-void stepper() {
+void stepper(){
 	
 		switch(Steps){
 			case 0:
-			GPIO_WriteBit(GPIOE,GPIO_Pin_7, LOW); 
-			GPIO_WriteBit(GPIOE,GPIO_Pin_8, HIGH);
-			GPIO_WriteBit(GPIOE,GPIO_Pin_9, HIGH);
+			GPIO_WriteBit(GPIOE,GPIO_Pin_7, HIGH); 
+			GPIO_WriteBit(GPIOE,GPIO_Pin_8, LOW);
+			GPIO_WriteBit(GPIOE,GPIO_Pin_9, LOW);
 			GPIO_WriteBit(GPIOE,GPIO_Pin_10, LOW);
 			break; 
 			case 1:
 			GPIO_WriteBit(GPIOE,GPIO_Pin_7, LOW); 
-			GPIO_WriteBit(GPIOE,GPIO_Pin_8, HIGH);
-			GPIO_WriteBit(GPIOE,GPIO_Pin_9, LOW);
-			GPIO_WriteBit(GPIOE,GPIO_Pin_10, HIGH);
-			break; 
-			case 2:
-			GPIO_WriteBit(GPIOE,GPIO_Pin_7, HIGH); 
-			GPIO_WriteBit(GPIOE,GPIO_Pin_8, LOW);
-			GPIO_WriteBit(GPIOE,GPIO_Pin_9, LOW);
-			GPIO_WriteBit(GPIOE,GPIO_Pin_10, HIGH);
-			break; 
-			case 3:
-			GPIO_WriteBit(GPIOE,GPIO_Pin_7, HIGH); 
 			GPIO_WriteBit(GPIOE,GPIO_Pin_8, LOW);
 			GPIO_WriteBit(GPIOE,GPIO_Pin_9, HIGH);
 			GPIO_WriteBit(GPIOE,GPIO_Pin_10, LOW);
+			break; 
+			case 2:
+			GPIO_WriteBit(GPIOE,GPIO_Pin_7, LOW); 
+			GPIO_WriteBit(GPIOE,GPIO_Pin_8, HIGH);
+			GPIO_WriteBit(GPIOE,GPIO_Pin_9, LOW);
+			GPIO_WriteBit(GPIOE,GPIO_Pin_10, LOW);
+			break; 
+			case 3:
+			GPIO_WriteBit(GPIOE,GPIO_Pin_7, LOW); 
+			GPIO_WriteBit(GPIOE,GPIO_Pin_8, LOW);
+			GPIO_WriteBit(GPIOE,GPIO_Pin_9, LOW);
+			GPIO_WriteBit(GPIOE,GPIO_Pin_10, HIGH);
 			break; 
 			default:
 			GPIO_WriteBit(GPIOE,GPIO_Pin_7, LOW); 
