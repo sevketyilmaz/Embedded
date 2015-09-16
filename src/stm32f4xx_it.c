@@ -175,13 +175,13 @@ void SysTick_Handler(void)
   * @param  None
   * @retval None
   */
+/*
 void EXTI0_IRQHandler(void)
 {
   if (EXTI_GetITStatus(EXTI_Line0) != RESET) {		 
-    /* Clear the EXTI line  pending bit */
     EXTI_ClearITPendingBit(EXTI_Line0);
   }
   
 }
-
+*/
 /******* Portions COPYRIGHT 2012 Embest Tech. Co., Ltd.*****END OF FILE****/

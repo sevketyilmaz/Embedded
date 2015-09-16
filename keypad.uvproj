@@ -7,7 +7,7 @@
 
   <Targets>
     <Target>
-      <TargetName>PillBox</TargetName>
+      <TargetName>Keypad</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <TargetOption>
@@ -45,13 +45,13 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\Hex\</OutputDirectory>
-          <OutputName>pill_box</OutputName>
+          <OutputName>keypad</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
-          <CreateHexFile>1</CreateHexFile>
+          <CreateHexFile>0</CreateHexFile>
           <DebugInformation>1</DebugInformation>
-          <BrowseInformation>1</BrowseInformation>
-          <ListingPath>.\</ListingPath>
+          <BrowseInformation>0</BrowseInformation>
+          <ListingPath>.\Hex\</ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
           <Merge32K>0</Merge32K>
           <CreateBatchFile>0</CreateBatchFile>
@@ -214,11 +214,11 @@
             <hadIRAM>1</hadIRAM>
             <hadXRAM>0</hadXRAM>
             <uocXRam>0</uocXRam>
-            <RvdsVP>2</RvdsVP>
+            <RvdsVP>1</RvdsVP>
             <hadIRAM2>1</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
-            <useUlib>0</useUlib>
+            <useUlib>1</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
             <RoSelD>3</RoSelD>
@@ -355,9 +355,9 @@
             <uSurpInc>0</uSurpInc>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>STM32F4XX, USE_STDPERIPH_DRIVER</Define>
+              <Define>STM32F4XX, USE_STDPERIPH_DRIVER, USE_STM32F4_DISCOVERY</Define>
               <Undefine></Undefine>
-              <IncludePath>.\src;.\inc;.\Libraries\CMSIS\Include;.\Libraries\CMSIS\Device\ST\STM32F4xx\Include;.\Libraries\STM32F4xx_StdPeriph_Driver\src;.\Libraries\STM32F4xx_StdPeriph_Driver\inc;.\Utilities\STM32F4-Discovery;.\DELAY</IncludePath>
+              <IncludePath>.\src;.\inc;.\Libraries\CMSIS\Include;.\Libraries\CMSIS\Device\ST\STM32F4xx\Include;.\Libraries\STM32F4xx_StdPeriph_Driver\src;.\Libraries\STM32F4xx_StdPeriph_Driver\inc;.\Utilities\STM32F4-Discovery;.\Delay;.\Keypad</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -371,13 +371,13 @@
             <uSurpInc>0</uSurpInc>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define></Define>
+              <Define>STM32F4XX, USE_STDPERIPH_DRIVER, USE_STM32F4_DISCOVERY</Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>.\src;.\inc;.\Libraries\CMSIS\Include;.\Libraries\CMSIS\Device\ST\STM32F4xx\Include;.\Libraries\STM32F4xx_StdPeriph_Driver\src;.\Libraries\STM32F4xx_StdPeriph_Driver\inc;.\Utilities\STM32F4-Discovery;.\Delay</IncludePath>
             </VariousControls>
           </Aads>
           <LDads>
-            <umfTarg>0</umfTarg>
+            <umfTarg>1</umfTarg>
             <Ropi>0</Ropi>
             <Rwpi>0</Rwpi>
             <noStLib>0</noStLib>
@@ -616,7 +616,22 @@
             <File>
               <FileName>delay.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\DELAY\delay.c</FilePath>
+              <FilePath>.\Delay\delay.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Keypad</GroupName>
+          <Files>
+            <File>
+              <FileName>keypad.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Keypad\keypad.c</FilePath>
+            </File>
+            <File>
+              <FileName>keypad.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Keypad\keypad.h</FilePath>
             </File>
           </Files>
         </Group>
